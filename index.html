@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Campus Cart | IIM Indore</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="#home" aria-label="Campus Cart home"><span class="brand-mark">cc</span><span>campus<span>cart</span></span></a>
+      <nav class="nav-links" aria-label="Main navigation">
+        <a class="active" href="#marketplace">Marketplace</a>
+        <a href="#how-it-works">How it works</a>
+        <a href="#sell">Sell an item</a>
+      </nav>
+      <button class="profile-btn" aria-label="Open profile">AS</button>
+    </header>
+
+    <main id="home">
+      <section class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow">IIM INDORE COMMUNITY MARKETPLACE</p>
+          <h1>Pass it on.<br /><em>Find what’s next.</em></h1>
+          <p class="hero-text">A simpler, safer way for the IIM Indore community to buy and sell the things that make campus life better.</p>
+          <div class="hero-actions">
+            <a class="button button-dark" href="#marketplace">Explore items <span>→</span></a>
+            <a class="text-link" href="#sell">List something <span>↗</span></a>
+          </div>
+        </div>
+        <div class="hero-art" aria-label="Illustration of campus marketplace items">
+          <div class="sun"></div><div class="arch arch-one"></div><div class="arch arch-two"></div>
+          <div class="chair"><span></span><i></i></div><div class="book book-one">eco</div><div class="book book-two"></div>
+          <div class="plant"><i></i><i></i><i></i><b></b></div><div class="ground"></div>
+          <div class="trust-badge"><strong>100%</strong><span>campus<br />community</span></div>
+        </div>
+      </section>
+
+      <section class="trust-row">
+        <span>ONLY FOR IIM INDORE</span><i></i><span>BUY LOCAL, MEET ON CAMPUS</span><i></i><span>NO PLATFORM FEES</span>
+      </section>
+
+      <section class="market-section" id="marketplace">
+        <div class="section-heading">
+          <div><p class="eyebrow">FRESH ON CAMPUS</p><h2>Browse the marketplace</h2></div>
+          <button class="filter-btn" id="filterButton">☷ &nbsp; Filters <span id="filterCount">0</span></button>
+        </div>
+        <div class="category-row" id="categories">
+          <button class="category active" data-category="All">All items</button>
+          <button class="category" data-category="Books">Books & notes</button>
+          <button class="category" data-category="Electronics">Electronics</button>
+          <button class="category" data-category="Furniture">Furniture</button>
+          <button class="category" data-category="Lifestyle">Lifestyle</button>
+          <button class="category" data-category="Sports">Sports</button>
+        </div>
+        <div class="listing-grid" id="listingGrid"></div>
+        <button class="load-more" id="loadMore">View more listings <span>↓</span></button>
+      </section>
+
+      <section class="sell-banner" id="sell">
+        <div><p class="eyebrow">GOT SOMETHING TO SHARE?</p><h2>Your stuff deserves<br />a <em>second story.</em></h2><p>Clear space, make someone’s day, and earn a little something along the way.</p></div>
+        <button class="button button-coral" id="openSell">Post an item <span>→</span></button>
+      </section>
+
+      <section class="how-section" id="how-it-works">
+        <p class="eyebrow">SIMPLE BY DESIGN</p><h2>From one student to another.</h2>
+        <div class="steps"><article><b>01</b><h3>Find your thing</h3><p>Browse listings posted by people right here on campus.</p></article><article><b>02</b><h3>Start a conversation</h3><p>Message the seller and agree on a time that works.</p></article><article><b>03</b><h3>Meet & exchange</h3><p>Meet in a familiar campus spot and you’re all set.</p></article></div>
+      </section>
+    </main>
+
+    <footer><a class="brand" href="#home"><span class="brand-mark">cc</span><span>campus<span>cart</span></span></a><p>Made for the IIM Indore community.</p><span>© 2024 CAMPUS CART</span></footer>
+
+    <dialog id="sellDialog"><button class="close" id="closeSell" aria-label="Close">×</button><p class="eyebrow">SELL ON CAMPUS</p><h2>List an item</h2><form id="sellForm"><label>Item name<input required placeholder="e.g. Financial Management textbook" /></label><label>Category<select required><option value="">Choose a category</option><option>Books</option><option>Electronics</option><option>Furniture</option><option>Lifestyle</option><option>Sports</option></select></label><label>Price (₹)<input required type="number" min="0" placeholder="0" /></label><label>Tell buyers more<textarea required placeholder="Condition, pickup details, and anything else helpful."></textarea></label><button class="button button-dark" type="submit">Publish listing <span>→</span></button></form></dialog>
+    <div class="toast" id="toast">Listing saved for this demo!</div>
+    <script src="script.js"></script>
+  </body>
+</html>
